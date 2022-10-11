@@ -3,6 +3,7 @@ from sklearn.metrics import confusion_matrix
 from tensorflow import keras
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Flatten
+from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten
 import numpy as np
 import matplotlib.pyplot as plt
 from argparse import ArgumentParser
@@ -27,7 +28,7 @@ parser = ArgumentParser()
 # Hint: Large Epochs will achieve better performance.
 # Hint: Large Hidden Size will achieve better performance.
 parser.add_argument("--optimizer", default='Adam', type=str)
-parser.add_argument("--epochs", default=40, type=int)
+parser.add_argument("--epochs", default=30, type=int)
 parser.add_argument("--hidden_size", default=300, type=int)
 parser.add_argument("--scale_factor", default=100, type=float)
 ###########################MAGIC ENDS HERE##########################
@@ -124,11 +125,16 @@ model = Sequential()
 ###########################MAGIC HAPPENS HERE##########################
 # Build up a neural network to achieve better performance.
 # Hint: Deeper networks (i.e., more hidden layers) and a different activation function may achieve better results.
+num_filters = 40
+filter_size = 3
+pool_size = 5
+
+model.add(Conv2D(num_filters, filter_size, input_shape=(32, 32, 1)))
+model.add(MaxPooling2D(pool_size=pool_size))
 model.add(Flatten())
-model.add(Dense(args.hidden_size, activation='selu'))  # first layer
-model.add(Dense((args.hidden_size)*7/8, activation='selu'))  # second layer
-model.add(Dense((args.hidden_size)*1/5, activation='relu'))  # third layer
-model.add(Dense((args.hidden_size)*1/8, activation='relu'))  # fourth layer
+model.add(Dense(args.hidden_size, activation='tanh'))  # first layer
+model.add(Dense((args.hidden_size)*7/8, activation='tanh'))  # second layer
+model.add(Dense((args.hidden_size)*5/6, activation='relu'))  # fourth layer
 
 ###########################MAGIC ENDS HERE##########################
 model.add(Dense(num_labels))  # last layer
