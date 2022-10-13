@@ -34,6 +34,8 @@ model.add(Dense((args.hidden_size)*7/8, activation="relu"))  # first layer
 model.add(Dense((args.hidden_size)*5/6, activation='relu'))  # second layer
 model.add(Dense((args.hidden_size)*1/5, activation='selu'))  # third layer
 ```
+Below is an example of our model successfully classifying an image of a ship!
+![CorrectShip](https://user-images.githubusercontent.com/64103447/195729037-786ff0cf-ee4a-4f3b-bb47-49c393e93b86.png)
 
 ### Training performance plot
 The following plot represents our model's training accuracy and validation accuracy with respect to the number of training epochs (x axis) and accuracy (y axis).
@@ -44,8 +46,15 @@ The following plot represents our model's training accuracy and validation accur
 
 ### Misclassified Visualizations
 
+Despite the high accuracy of our model, there were still a few misclassifications- here are three examples.
 
-Here are three of the images our best performing model misclassified: 
-The written report includes a visualization of three of the images that were misclassified by your best-performing model.
+![IncorrectAutoClassification_WasAHorse](https://user-images.githubusercontent.com/64103447/195728778-79ce563e-59cb-49a5-9def-9d00c33b6af0.png)
+ 
+ In this case, our model thought this difficult to discern horse was an automobile. 
+![IncorrectFrogClassification_WasADeer](https://user-images.githubusercontent.com/64103447/195728823-07e11e98-6d34-4f28-8590-1d8dd17ad4ea.png)
 
+Given that this image is difficult for a human to percieve, it is understandable that it was misclassified. 
 
+![IncorrectTruckClassification_WasAnAutomobile](https://user-images.githubusercontent.com/64103447/195728909-fc99319d-80f2-4a0b-8954-a429257aedee.png)
+
+This was a close misclassification that can potentially be explained by the close resemblance of trucks and automobiles.
