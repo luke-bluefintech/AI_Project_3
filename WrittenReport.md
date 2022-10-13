@@ -12,7 +12,7 @@ In our CNN, we are using 40 filters to find patterns in our images, as a relativ
 
 ### Model Performance & Confusion Matrix
 
-The aspects of our network that impact the testing accuracy the most are number of epochs, network architecture, and pooling size value. We used a scaling factor of _ for feature scaling, and we obtained accuracies ranging between 31%-63%, with our best accuracy being 63.85%
+The aspects of our network that impact the testing accuracy the most are number of epochs, network architecture, and pooling size value. In our best performing model, we obtained accuracies ranging between 31%-63%, with our best accuracy being 63.85%
 
 Here is a confusion matrix for the results of our best performing model:
 
