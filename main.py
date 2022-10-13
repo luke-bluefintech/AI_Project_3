@@ -167,6 +167,19 @@ model.save(args.model_output_path + "/" + args.model_nick_name)
 y_test_predict = np.argmax(model.predict(x_test), axis=1)
 
 ###########################MAGIC HAPPENS HERE##########################
+precision = precision_score(y_test, y_test_predict, average = None)
+recall = recall_score(y_test, y_test_predict, average = None)
+
+print('Precision: ', precision)
+print('Recall: ', recall)
+
+m = confusion_matrix(y_test, y_test_predict)
+plt.matshow(m)
+plt.colorbar()
+plt.show()
+
+
+
 # Visualize the confusion matrix by matplotlib and sklearn based on y_test_predict and y_test
 # Report the precision and recall for 10 different classes
 # Hint: check the precision and recall functions from sklearn package or you can implement these function by yourselves.
