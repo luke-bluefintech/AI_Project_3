@@ -17,6 +17,7 @@ The aspects of our network that impact the testing accuracy the most are number 
 Here is a confusion matrix for the results of our best performing model:
 
 ![BestGraph](https://user-images.githubusercontent.com/64103447/195634316-eff6334d-7de5-4b64-9898-ac6eaa1dcd67.png)
+![image](https://user-images.githubusercontent.com/64103447/195641687-a7fc1647-4333-4005-a458-4cf1a1546ad9.png)
 
 To design our best performing model, we used the __ training procedure
 Our best performing model had an accuracy of almost 64%, precision value of [], and recall value of []. 
