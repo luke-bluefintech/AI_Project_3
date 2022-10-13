@@ -11,7 +11,7 @@ The optimizer that we are using is Adam because it achieves a high initial accur
 
 In our CNN, we are using 40 filters to find patterns in our images, as a relatively high filter value increases our training accuracy. We experimented with various Our filter size is 3, because size these images are only 2x2, a size larger than this is too much to analyze to find a pattern, and a size smaller does not have enough information.Our pooling size is 5, which is relatively large, and is done because this helps us to find averages of values along long stretches of the image. Our model also has three layers, tanh, tanh, and relu activation functions respectively,with a high number of analyzed values to achieve the best performance. Smaller and larger networks tended to be less accurate for this data set, and analyzing small proportions of the data set would not affect the testing accuracy by much.
 
-The aspects of our network that impact the testing accuracy the most are number of epochs, network architecture, and pooling size value. We used a scaling factor of _ for feature scaling, and we obtained accuracies ranging between 31%-61%, with our best accuracy being 63.85%
+The aspects of our network that impact the testing accuracy the most are number of epochs, network architecture, and pooling size value. We used a scaling factor of _ for feature scaling, and we obtained accuracies ranging between 31%-63%, with our best accuracy being 63.85%
 
 ### Here is our best performing model: 
 
