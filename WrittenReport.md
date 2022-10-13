@@ -23,7 +23,11 @@ To design our best performing model, we used the __ training procedure
 Our best performing model had an accuracy of almost 64%, precision value of [], and recall value of []. 
 
 ### Training performance plot
-here is a training performance plot from our CNN
+The following plot represents our model's training accuracy and validation accuracy with respect to the number of training epochs (x axis) and accuracy (y axis).
+
+ ![desmos-graph](https://user-images.githubusercontent.com/64103447/195652860-021b324f-a8e7-4d97-8c2b-2bed9264e743.png)
+
+
 
 ### Misclassified Visualizations
 
