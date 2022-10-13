@@ -12,7 +12,7 @@ In our CNN, we are using 40 filters to find patterns in our images, as a relativ
 
 ### Model Performance & Confusion Matrix
 
-The aspects of our network that impact the testing accuracy the most are number of epochs, network architecture, and pooling size value. In our best performing model, we obtained accuracies ranging between 31%-63%, with our best accuracy being 63.48%
+The aspects of our network that impact the testing accuracy the most are number of epochs, network architecture, and pooling size value. In our best performing model, we obtained accuracies ranging between 31%-63%, with our best accuracy being 63.48%. The output of our best performing model is located in the Model folder.
 
 In our best performing model, our precision and accuracy were
 
