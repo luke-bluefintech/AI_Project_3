@@ -21,10 +21,12 @@ Here is a confusion matrix for the results of our best performing model:
 
 To design our best performing model, we used the following activation functions in our training procedure:
 
+```
 model.add(Flatten())
 model.add(Dense((args.hidden_size)*7/8, activation="relu"))  # first layer
 model.add(Dense((args.hidden_size)*5/6, activation='relu'))  # second layer
 model.add(Dense((args.hidden_size)*1/5, activation='selu'))  # third layer
+```
 
 ### Training performance plot
 The following plot represents our model's training accuracy and validation accuracy with respect to the number of training epochs (x axis) and accuracy (y axis).
